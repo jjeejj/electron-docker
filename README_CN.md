@@ -11,7 +11,7 @@
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-dockeron 项目, 利用 Electron + Vue.js 为 Docker 构建一个客户端.
+electron-docker 项目, 利用 Electron + Vue.js 为 Docker 构建一个客户端.
   - 模板生成: [electron-vue](https://github.com/SimulatedGREG/electron-vue)
   - Docker Engine API: [dockerode](https://github.com/apocas/dockerode).
   - UI 组件: [iView](https://github.com/iview/iview)
