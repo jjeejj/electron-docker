@@ -3,3 +3,4 @@ test/unit/*.js
 test/e2e/*.js
 tasks/
 .electron-vue/
+node_modules/

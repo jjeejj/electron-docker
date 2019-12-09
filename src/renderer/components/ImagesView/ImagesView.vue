@@ -3,7 +3,7 @@
     <Button type="primary" icon="refresh" @click="refreshImages">Refresh</Button>
     <Button type="primary" icon="plus-round" @click="imagePullModal = true">Pull</Button>
     <Modal v-model="imagePullModal" title="Pull Image" @on-ok="pullImage" @on-cancel="repoTag = ''">
-      <Input v-model="repoTag" placeholder="Image Name (and Tag)"></Input>
+      <Input v-model="repoTag" placeholder="Image Name (and Tag)"/>
     </Modal>
     <!-- <div class="docker-hub-panel">
       <login-panel></login-panel>
@@ -15,7 +15,7 @@
           <Tooltip placement="right">
             {{getImageName(image.RepoTags[0])}}
             <div slot="content" class="description-pop">
-              <p v-for="name in image.RepoTags">{{name}}</p>
+              <p v-for="(name, index) in image.RepoTags" v-bind:key="index">{{name}}</p>
             </div>
           </Tooltip>
         </p>
@@ -112,6 +112,7 @@
         }
 
         const updateImages = images => {
+          console.log('images', images)
           this.images = images
           this.error = {}
         }

@@ -20,8 +20,8 @@
         <Menu-item name="menu-docker-hub">
           <Icon type="stats-bars"></Icon>Docker Hub
         </Menu-item>
-        <Menu-item name="menu-daemon-hub">
-          <Icon type="stats-bars"></Icon>Docker Daemon
+        <Menu-item name="menu-docker-daemon">
+          <Icon type="ios-umbrella"></Icon>Docker Daemon
         </Menu-item>
         <Submenu name="menu-settings">
           <template slot="title">
@@ -125,6 +125,11 @@
               path: Route.HOME_PAGE_PATH + Route.DOCKER_HUB_VIEW_PATH
             })
             break
+          case 'menu-docker-daemon':
+            this.$router.push({
+              path: Route.HOME_PAGE_PATH + Route.DOCKER_DAEMON_VIEW_PATH
+            })
+            break
           case 'menu-settings-info':
             this.showInfo = true
             break
@@ -214,9 +219,9 @@
   .layout-content {
     min-height: 200px;
     overflow: auto;
-    ::-webkit-scrollbar {display:none;}
     max-height: 100vh;
     padding: 10px;
+    ::-webkit-scrollbar {display:none;}
   }
 
   .layout-copy {
