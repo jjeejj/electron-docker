@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 import setIPCChannels from './setIPCChannels'
 import {
   BROWSER_WINDOW_EVENT_CLOSED,
@@ -30,10 +30,10 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 600,
+    height: 800,
     // transparent: true,
     titleBarStyle: 'hidden',
-    width: 1000
+    width: 1200
   })
 
   mainWindow.loadURL(winURL)
@@ -41,6 +41,9 @@ function createWindow () {
   mainWindow.on(BROWSER_WINDOW_EVENT_CLOSED, () => {
     mainWindow = null
   })
+
+  // hide menu
+  Menu.setApplicationMenu(null)
 }
 
 app.on(APP_EVENT_READY, createWindow)

@@ -20,6 +20,9 @@
         <Menu-item name="menu-docker-hub">
           <Icon type="stats-bars"></Icon>Docker Hub
         </Menu-item>
+        <Menu-item name="menu-daemon-hub">
+          <Icon type="stats-bars"></Icon>Docker Daemon
+        </Menu-item>
         <Submenu name="menu-settings">
           <template slot="title">
             <Icon type="settings"></Icon>

@@ -60,6 +60,11 @@ export default [
         path: Route.DOCKER_HUB_VIEW_PATH,
         name: Route.DOCKER_HUB_VIEW_NAME,
         component: require('../components/DockerHubView/DockerHubView')
+      },
+      {
+        path: Route.DOCKER_DAEMON_VIEW_PATH,
+        name: Route.DOCKER_DAEMON_VIEW_NAME,
+        component: require('../components/DockerDaemonView/DockerDaemonView')
       }
     ]
   },

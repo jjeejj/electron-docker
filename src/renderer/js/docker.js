@@ -15,7 +15,8 @@ try {
   notify(e)
 }
 
-var docker = new Docker({ socketPath: socket })
-// notify('New Docker Engine Obtained.')
+// var docker = new Docker({ socketPath: socket })
+var docker = new Docker({ protocol: 'tcp', host: '127.0.0.1', port: 2375 })
+notify('New Docker Engine Obtained.')
 
 export default docker
