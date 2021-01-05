@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "ajv": "^5.0.4-beta.3",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "dockerode": "^2.4.3",
     "iview": "^2.0.0",
     "lodash": "^4.17.4",
